@@ -1,0 +1,53 @@
+<div class="add-task-container form-container">
+  <h1>Real time market price</h1>
+  <form [formGroup]="form"
+        name="form"
+        class="form-wr">
+    <div class="form-group "
+         [ngClass]="{'has-error': !asset.valid && (asset.dirty || asset.touched )}">
+      <select formControlName="asset"
+              type="text"
+              class="form-control select"
+              name="asset"
+              id="asset"
+              placeholder="Asset"
+              (change)="onChangeAsset()">
+        <option *ngFor="let coin of listAssets"
+                [value]="coin">
+          <div class="option">
+            {{coin}}/USD
+          </div>
+
+        </option>
+      </select>
+    </div>
+  </form>
+  <div class="market-data">
+    <p class="market-data_title">Market data</p>
+    <div class="market-data_content">
+      <div class="market-data_content_col">
+        <p class="market-data_content_col_title">
+          Sumbol:
+        </p>
+        <p>
+          {{assetSelected}}/USD
+        </p>
+      </div>
+      <div class="market-data_content_col">
+        <p class="market-data_content_col_title">
+          Price:
+        </p>
+        <p>
+          ${{messageMarketData?.price}}
+        </p>
+      </div>
+      <div class="market-data_content_col">
+        <p class="market-data_content_col_title">
+          Time
+        </p>
+        <p>
+          {{messageMarketData?.time_exchange}}
+      </div>
+    </div>
+  </div>
+</div>

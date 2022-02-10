@@ -1,0 +1,57 @@
+.form-container {
+	h1 {
+		margin: 0 0 15px;
+		padding: 0;
+		font-size: 24px;
+		border-bottom: 1px solid;
+	}
+
+	.form-wr {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		padding: 5px 0 15px;
+	}
+
+	.form-group {
+		width: 100%;
+	}
+	select {
+		width: 100%;
+		height: 40px;
+		font-family: 'Times New Roman', serif;
+		font-size: 16px;
+	}
+
+	.market-data {
+		.market-data_title {
+			font-size: 18px;
+			font-weight: 500;
+			margin-bottom: 8px;
+		}
+		.market-data_content {
+			border: 1px solid;
+			border-radius: 4px;
+			padding: 12px;
+			display: flex;
+			flex-direction: row;
+			.market-data_content_col {
+				width: 33.33%;
+				text-align: center;
+			}
+		}
+	}
+	.has-error {
+		input {
+			position: relative;
+			border: 1px solid red;
+		}
+		span {
+			position: absolute;
+			margin-top: -15px;
+			color: red;
+			font-size: 12px;
+		}
+	}
+}
